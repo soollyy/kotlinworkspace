@@ -16,7 +16,7 @@ which replaces all occurrences of a specified character or substring with anothe
 In this case, the function replaces all spaces (represented by the string " ")
 with an empty string (represented by "")*/
 
-//.replace is replacing the frist aru=gument with the second argument so
+//.replace is replacing the first argument with the second argument so
 //if you had : x= "hello" and you were told to replace o with i. you would do..
 
 // x.replace("o", "i") then println(result) to print the result of what you replaced. ("helli")
