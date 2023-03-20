@@ -37,3 +37,64 @@
 //println(getUsers()) // [User(id=1, name=John Doe, email=john.doe@example.com), User(id=2, name=Jane Doe, email=jane@example.com)]
 //deleteUser(2)
 //println(getUsers()) // [User(id=1, name=John Doe, email=john.doe@example.com)]
+
+
+//SCROLL
+
+
+//To create CRUD operations in Kotlin, you will need to perform the following steps:
+
+/* Define a data class that represents the entity you want to perform CRUD operations on.
+For example, if you want to perform CRUD operations on a "User" entity, you could define a data class like this:*/
+
+//data class User(
+//    val id: Int,
+//    val name: String,
+//    val email: String
+//)
+
+
+
+//Create an interface that defines the CRUD operations you want to perform. For example, you could create an interface like this
+
+//interface UserRepository {
+//    fun create(user: User): User
+//    fun read(id: Int): User?
+//    fun update(user: User): User
+//    fun delete(id: Int): Boolean
+//}
+
+
+
+//Implement the interface in a class that will perform the CRUD operations. For example, you could create a class like this
+
+//class InMemoryUserRepository : UserRepository {
+//    private val users = mutableListOf<User>()
+//    private var nextId = 1
+//
+//    override fun create(user: User): User {
+//        val newUser = user.copy(id = nextId++)
+//        users.add(newUser)
+//        return newUser
+//    }
+//
+//    override fun read(id: Int): User? {
+//        return users.find { it.id == id }
+//    }
+//
+//    override fun update(user: User): User {
+//        val index = users.indexOfFirst { it.id == user.id }
+//        if (index == -1) throw IllegalArgumentException("User not found")
+//        users[index] = user
+//        return user
+//    }
+//
+//    override fun delete(id: Int): Boolean {
+//        val index = users.indexOfFirst { it.id == id }
+//        if (index == -1) return false
+//        users.removeAt(index)
+//        return true
+//    }
+//}
+
+
